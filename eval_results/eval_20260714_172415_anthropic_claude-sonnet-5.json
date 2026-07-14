@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "timestamp": "2026-07-14 17:24:15",
+    "model": "anthropic/claude-sonnet-5",
+    "golden_count": 6,
+    "views": [
+      "consensus",
+      "ocr",
+      "text",
+      "vision"
+    ],
+    "total_cost_usd": 0.251486
+  },
+  "accuracy": {
+    "ocr": {
+      "cost_usd": 0.07464799999999999,
+      "fields": {
+        "invoice_id": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "supplier_name": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "amount": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "currency": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "invoice_date": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "due_date": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "po_reference": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 1,
+          "total": 6,
+          "accuracy": 0.8333333333333334
+        }
+      },
+      "overall": {
+        "correct": 41,
+        "hallucination": 0,
+        "miss": 1,
+        "total": 42,
+        "accuracy": 0.9761904761904762
+      }
+    },
+    "text": {
+      "cost_usd": 0.060072,
+      "fields": {
+        "invoice_id": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "supplier_name": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "amount": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "currency": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "invoice_date": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "due_date": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "po_reference": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 5,
+          "accuracy": 1.0
+        }
+      },
+      "overall": {
+        "correct": 35,
+        "hallucination": 0,
+        "miss": 0,
+        "total": 35,
+        "accuracy": 1.0
+      }
+    },
+    "vision": {
+      "cost_usd": 0.116766,
+      "fields": {
+        "invoice_id": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "supplier_name": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "amount": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "currency": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "invoice_date": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "due_date": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "po_reference": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        }
+      },
+      "overall": {
+        "correct": 42,
+        "hallucination": 0,
+        "miss": 0,
+        "total": 42,
+        "accuracy": 1.0
+      }
+    },
+    "consensus": {
+      "cost_usd": 0.155672,
+      "fields": {
+        "invoice_id": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "supplier_name": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "amount": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "currency": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "invoice_date": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "due_date": {
+          "correct": 6,
+          "hallucination": 0,
+          "miss": 0,
+          "total": 6,
+          "accuracy": 1.0
+        },
+        "po_reference": {
+          "correct": 5,
+          "hallucination": 0,
+          "miss": 1,
+          "total": 6,
+          "accuracy": 0.8333333333333334
+        }
+      },
+      "overall": {
+        "correct": 41,
+        "hallucination": 0,
+        "miss": 1,
+        "total": 42,
+        "accuracy": 0.9761904761904762
+      }
+    }
+  },
+  "grounding": {
+    "ocr": {
+      "grounded": 38,
+      "checkable": 38,
+      "rate": 1.0
+    },
+    "text": {
+      "grounded": 32,
+      "checkable": 32,
+      "rate": 1.0
+    },
+    "consensus": {
+      "grounded": 38,
+      "checkable": 38,
+      "rate": 1.0
+    }
+  },
+  "failures": [
+    {
+      "invoice": "golden/pdfs/invoice_07.pdf",
+      "view": "ocr",
+      "field": "po_reference",
+      "outcome": "miss",
+      "gold": "PO-44561",
+      "extracted": null
+    },
+    {
+      "invoice": "golden/pdfs/invoice_07.pdf",
+      "view": "consensus",
+      "field": "po_reference",
+      "outcome": "miss",
+      "gold": "PO-44561",
+      "extracted": null
+    }
+  ]
+}

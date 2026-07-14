@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Generated pipeline outputs (eval_results/ is tracked — it's a deliverable)
+/enriched.jsonl
+/extractions.jsonl
+/triage.jsonl
+# Ignore every run under results/ EXCEPT the one committed as the Task 3 deliverable.
+results/*
+!results/20260714_183253_anthropic_claude-haiku-4.5/
+
+# macOS
+.DS_Store

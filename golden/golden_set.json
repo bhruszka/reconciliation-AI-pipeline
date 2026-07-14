@@ -1,0 +1,112 @@
+{
+  "invoices": [
+    {
+      "invoice_path": "golden/pdfs/invoice_02.pdf",
+      "language": "de",
+      "source": "digital",
+      "labels": {
+        "invoice_id": "RE-2026-1198",
+        "supplier_name": "Berliner Maschinenbau GmbH",
+        "amount": "8750.00",
+        "currency": "EUR",
+        "invoice_date": "2026-04-05",
+        "due_date": "2026-05-05",
+        "po_reference": null
+      },
+      "notes": {
+        "po_reference": "Null-PO trap: the real field is explicitly empty ('Bestellnummer: —') with tempting distractors nearby — Kundennummer K-77441, Lieferschein LS-2026-441. Correct answer is null.",
+        "amount": "Gesamtbetrag 8.750,00 is the total; Zwischensumme 7.352,94 is the subtotal distractor (and equals the single line-item price, so the wrong value appears twice)."
+      }
+    },
+    {
+      "invoice_path": "golden/pdfs/invoice_03.pdf",
+      "language": "en",
+      "source": "digital",
+      "labels": {
+        "invoice_id": "INV-44219",
+        "supplier_name": "Acme Tools Inc.",
+        "amount": "3245.50",
+        "currency": "USD",
+        "invoice_date": "2026-04-07",
+        "due_date": "2026-04-21",
+        "po_reference": "PO-44530"
+      },
+      "notes": {
+        "supplier_name": "Header reads 'ACME TOOLS'; the legal entity in the footer / ACH block is 'Acme Tools Inc.' — the latter is the label.",
+        "po_reference": "Positive control: 'PO # PO-44530' is a clearly-labeled customer PO and must be extracted, not abstained on."
+      }
+    },
+    {
+      "invoice_path": "golden/pdfs/invoice_04.pdf",
+      "language": "da",
+      "source": "digital",
+      "labels": {
+        "invoice_id": "2026-0488",
+        "supplier_name": "København Logistik ApS",
+        "amount": "4200.00",
+        "currency": "DKK",
+        "invoice_date": "2026-04-10",
+        "due_date": "2026-04-25",
+        "po_reference": null
+      },
+      "notes": {
+        "amount": "Over-abstention control: the total is labeled only 'Beløb 4.200,00 DKK' ('Amount'), never 'total payable'. It IS the total (Subtotal 3.360,00 + Moms 840,00); resolve from arithmetic/position rather than abstain.",
+        "po_reference": "'Reference —' → explicitly absent → null."
+      }
+    },
+    {
+      "invoice_path": "golden/pdfs/invoice_05.pdf",
+      "language": "de",
+      "source": "digital",
+      "labels": {
+        "invoice_id": "HVP-2026-077",
+        "supplier_name": "Hamburg Verpackung GmbH",
+        "amount": "2100.00",
+        "currency": "EUR",
+        "invoice_date": "2026-04-12",
+        "due_date": "2026-05-12",
+        "po_reference": "PO-44545"
+      },
+      "notes": {
+        "invoice_id": "Over-abstention control: the id appears only in the heading 'Rechnung HVP-2026-077' (no explicit 'Rechnungs-Nr.:' label) — a strict label-anchored extractor must still recognize it, not return null.",
+        "po_reference": "Positive control in German: 'Bestell-Nr.: PO-44545' is the customer PO and must be extracted — the counterpart to invoice_08's 'Auftragsnummer' trap."
+      }
+    },
+    {
+      "invoice_path": "golden/pdfs/invoice_07.pdf",
+      "language": "da",
+      "source": "scanned_image",
+      "labels": {
+        "invoice_id": "JT-0214",
+        "supplier_name": "Jutland Trading A/S",
+        "amount": "7320.00",
+        "currency": "DKK",
+        "invoice_date": "2026-04-15",
+        "due_date": "2026-05-15",
+        "po_reference": "PO-44561"
+      },
+      "notes": {
+        "po_reference": "'Ordrenr.: PO-44561' — an order-number label that here DOES cite the buyer's PO (PO-##### format). Label wording alone doesn't decide PO-ness; contrast with invoice_08's 'Auftragsnummer'.",
+        "_source": "The one scanned/image-only PDF (no text layer) — labels from visual inspection; exercises OCR + vision routing."
+      }
+    },
+    {
+      "invoice_path": "golden/pdfs/invoice_08.pdf",
+      "language": "de",
+      "source": "digital",
+      "labels": {
+        "invoice_id": "RE-2026-339",
+        "supplier_name": "München Hardware",
+        "amount": "5680.50",
+        "currency": "EUR",
+        "invoice_date": "2026-04-18",
+        "due_date": "2026-05-18",
+        "po_reference": null
+      },
+      "notes": {
+        "po_reference": "Centerpiece null-PO trap: 'Auftragsnummer AU-2026-4773' is the supplier's own order number and 'Lieferschein-Nr. LS-5680' a delivery note — neither is the customer PO (PO-##### elsewhere), so null. Every model first read AU-2026-4773 as the PO.",
+        "amount": "Gesamtbetrag/Zahlungsbetrag 5.680,50 is the total; Zwischensumme 4.772,69 is the subtotal distractor — and invoices.csv wrongly records 4.772,69 as the amount."
+      }
+    }
+  ]
+}
